@@ -270,7 +270,7 @@ class DebitTransactionPatterns(RegexEnum):
         + SharedPatterns.BALANCE
     )
     UOB = (
-        rf"(?P<transaction_date>{ISO8601.DD_MMM})\s+"
+        rf"^\s*(?P<transaction_date>{ISO8601.DD_MMM})\s+"
         + SharedPatterns.DESCRIPTION
         + SharedPatterns.AMOUNT_EXTENDED_WITHOUT_EOL
         + SharedPatterns.BALANCE
